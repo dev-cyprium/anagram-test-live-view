@@ -23,6 +23,7 @@ defmodule AnagramApiWeb do
 
       import Plug.Conn
       import AnagramApiWeb.Gettext
+      import Phoenix.LiveView.Controller
       alias AnagramApiWeb.Router.Helpers, as: Routes
     end
   end
@@ -37,6 +38,7 @@ defmodule AnagramApiWeb do
       import Phoenix.Controller,
         only: [get_flash: 1, get_flash: 2, view_module: 1, view_template: 1]
 
+      import Phoenix.LiveView.Helpers
       # Include shared imports and aliases for views
       unquote(view_helpers())
     end
@@ -48,6 +50,7 @@ defmodule AnagramApiWeb do
 
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 

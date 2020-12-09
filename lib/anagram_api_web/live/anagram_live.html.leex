@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to string calculator app!</h1>
+    <p class="lead">The simples way to check if a string with any substring is present in another string.</p>
+    <hr class="my-4">
+    <p class="text-muted">
+      To get started fill the form below
+    </p>
+
+    <%= f = form_for :input, "#", [phx_submit: :save, phx_change: :change] %>
+      <div class="mb-3">
+        <%= text_input f, :str1, class: "form-control", placeholder: "First string...", value: @str1 %>
+      </div>
+      <div class="mb-3">
+        <%= text_input f, :str2, class: "form-control", placeholder: "Second string...", value: @str2 %>
+      </div>
+
+      <div class="d-flex">
+        <%= submit "Process", class: "btn btn-primary", disabled: (is_empty_str(@str1) or is_empty_str(@str2)) %>
+        <%= if (@processing_result != nil) do %>
+          <%= if (@processing_result) do %>
+            <p class="ml-auto text-success">
+              The characters from first string can be arranged in the second string!
+            <p>
+          <% else %>
+            <p class="ml-auto text-danger">
+              The characters from first string cannot be arranged in the second string!
+            <p>
+          <% end %>
+        <% end %>
+      </div>
+    </form>
+  </div>
+</div>
