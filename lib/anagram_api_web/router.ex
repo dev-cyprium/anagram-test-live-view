@@ -20,9 +20,11 @@ defmodule AnagramApiWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", AnagramApiWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", AnagramApiWeb.API do
+    pipe_through :api
+
+    post "/anagram/does-include", AnagramController, :does_include
+  end
 
   # Enables LiveDashboard only for development
   #
