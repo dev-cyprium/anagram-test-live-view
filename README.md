@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/dev-cyprium/anagram-test-live-view/badge.svg?branch=master)](https://coveralls.io/github/dev-cyprium/anagram-test-live-view?branch=master)
+
 # AnagramApi
 
 To start your Phoenix server:
