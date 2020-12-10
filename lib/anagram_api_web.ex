@@ -69,7 +69,6 @@ defmodule AnagramApiWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import AnagramApiWeb.ErrorHelpers
       import AnagramApiWeb.Gettext
       alias AnagramApiWeb.Router.Helpers, as: Routes
     end
