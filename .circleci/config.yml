@@ -32,7 +32,7 @@ jobs:
           paths:
             - _build
             - ~/.mix
-      - run: mix coveralls.circle
+      - run: MIX_ENV=test mix coveralls.circle
 
 workflows:
   ci:
